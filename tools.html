@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8' />
+    <title>ESP_Easy Test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script><!--function dept_onchange(frmselect) { frmselect.submit(); }//--></script>
+    <link rel="stylesheet" type="text/css" href="esp.css">
+    <script src="espjs.js"></script> </head>
+
+<body class='bodymenu' id='shrink'>
+    <span class='message' id='rbtmsg'></span>
+    <header class='headermenu'>
+        <div class="logo">
+            <img src="esp.png" alt="espeasy" />
+        </div>        
+        <h1>ESP Easy Mega: ESP_Easy Test</h1>
+        <div class='menubar' id='myNav'>
+            <a class='menu' href='.'>Main</a>
+            <a class='menu' href='config'>Config</a>
+            <a class='menu' href='controllers'>Controllers</a>
+            <a class='menu' href='hardware'>Hardware</a>
+            <a class='menu' href='devices'>Devices</a>
+            <a class='menu' href='rules'>Rules</a>
+            <a class='menu' href='notifications'>Notifications</a>
+            <a class='menu active' href='tools'>Tools</a>
+            <a href='javascript:void(0);' class='icon' onclick='Topnav()'>&#9776;</a>
+        </div>
+    </header>
+    <section>
+        <span class='message error'></span>
+        <form>
+            <table>
+                <TR>
+                    <TD colspan='2'>
+                        <h2>Tools</h2>
+                        <TR>
+                            <TD colspan='2'>
+                                <h3>Command</h3>
+                                <TR>
+                                    <TD HEIGHT="30">
+                                        <input type='text' name='cmd' value=''>
+                                        <a class="button help" href="http://www.letscontrolit.com/wiki/index.php/ESPEasy_Command_Reference"
+                                            target="_blank">&#10068;</a>
+                                        <TD>
+                                            <input class='button link' type='submit' value='Submit'>
+                                            <TR>
+                                                <TD>
+                                                    <TR>
+                                                        <TD colspan='2'>
+                                                            <h3>System</h3>
+                                                            <TR>
+                                                                <TD HEIGHT="30">
+                                                                    <a class='button link' href='/?cmd=reboot'>Reboot</a>
+                                                                    <TD>Reboots ESP
+                                                                        <TR>
+                                                                            <TD HEIGHT="30">
+                                                                                <a class='button link' href='log'>Log</a>
+                                                                                <TD>Open log output
+                                                                                    <TR>
+                                                                                        <TD HEIGHT="30">
+                                                                                            <a class='button link' href='sysinfo'>Info</a>
+                                                                                            <TD>Open system info page
+                                                                                                <TR>
+                                                                                                    <TD HEIGHT="30">
+                                                                                                        <a class='button link'
+                                                                                                            href='advanced'>Advanced</a>
+                                                                                                        <TD>Open advanced settings
+                                                                                                            <TR>
+                                                                                                                <TD HEIGHT="30">
+                                                                                                                    <a class='button link'
+                                                                                                                        href='json'>Show
+                                                                                                                        JSON</a>
+                                                                                                                    <TD>Open
+                                                                                                                        JSON
+                                                                                                                        output
+                                                                                                                        <TR>
+                                                                                                                            <TD
+                                                                                                                                HEIGHT="30">
+                                                                                                                                <a
+                                                                                                                                    class='button link'
+                                                                                                                                    href='pinstates'>Pin
+                                                                                                                                    state
+                                                                                                                                    buffer</a>
+                                                                                                                                    <TD>Show
+                                                                                                                                        Pin
+                                                                                                                                        state
+                                                                                                                                        buffer
+                                                                                                                                        <TR>
+                                                                                                                                            <TD
+                                                                                                                                                colspan='2'>
+                                                                                                                                                <h3>Wifi</h3>
+                                                                                                                                                <TR>
+                                                                                                                                                    <TD
+                                                                                                                                                        HEIGHT="30">
+                                                                                                                                                        <a
+                                                                                                                                                            class='button link'
+                                                                                                                                                            href='/?cmd=wificonnect'>Connect</a>
+                                                                                                                                                            <TD>Connects
+                                                                                                                                                                to
+                                                                                                                                                                known
+                                                                                                                                                                Wifi
+                                                                                                                                                                network
+                                                                                                                                                                <TR>
+                                                                                                                                                                    <TD
+                                                                                                                                                                        HEIGHT="30">
+                                                                                                                                                                        <a
+                                                                                                                                                                            class='button link'
+                                                                                                                                                                            href='/?cmd=wifidisconnect'>Disconnect</a>
+                                                                                                                                                                            <TD>Disconnect
+                                                                                                                                                                                from
+                                                                                                                                                                                wifi
+                                                                                                                                                                                network
+                                                                                                                                                                                <TR>
+                                                                                                                                                                                    <TD
+                                                                                                                                                                                        HEIGHT="30">
+                                                                                                                                                                                        <a
+                                                                                                                                                                                            class='button link'
+                                                                                                                                                                                            href='wifiscanner'>Scan</a>
+                                                                                                                                                                                            <TD>Scan
+                                                                                                                                                                                                for
+                                                                                                                                                                                                wifi
+                                                                                                                                                                                                networks
+                                                                                                                                                                                                <TR>
+                                                                                                                                                                                                    <TD
+                                                                                                                                                                                                        colspan='2'>
+                                                                                                                                                                                                        <h3>Interfaces</h3>
+                                                                                                                                                                                                        <TR>
+                                                                                                                                                                                                            <TD
+                                                                                                                                                                                                                HEIGHT="30">
+                                                                                                                                                                                                                <a
+                                                                                                                                                                                                                    class='button link'
+                                                                                                                                                                                                                    href='i2cscanner'>I2C
+                                                                                                                                                                                                                    Scan</a>
+                                                                                                                                                                                                                    <TD>Scan
+                                                                                                                                                                                                                        for
+                                                                                                                                                                                                                        I2C
+                                                                                                                                                                                                                        devices
+                                                                                                                                                                                                                        <TR>
+                                                                                                                                                                                                                            <TD
+                                                                                                                                                                                                                                colspan='2'>
+                                                                                                                                                                                                                                <h3>Settings</h3>
+                                                                                                                                                                                                                                <TR>
+                                                                                                                                                                                                                                    <TD
+                                                                                                                                                                                                                                        HEIGHT="30">
+                                                                                                                                                                                                                                        <a
+                                                                                                                                                                                                                                            class='button link'
+                                                                                                                                                                                                                                            href='upload'>Load</a>
+                                                                                                                                                                                                                                            <TD>Loads
+                                                                                                                                                                                                                                                a
+                                                                                                                                                                                                                                                settings
+                                                                                                                                                                                                                                                file
+                                                                                                                                                                                                                                                <TR>
+                                                                                                                                                                                                                                                    <TD>
+                                                                                                                                                                                                                                                        <TD>
+                                                                                                                                                                                                                                                            <div
+                                                                                                                                                                                                                                                                class='note'>Note:
+                                                                                                                                                                                                                                                                (File
+                                                                                                                                                                                                                                                                MUST
+                                                                                                                                                                                                                                                                be
+                                                                                                                                                                                                                                                                renamed
+                                                                                                                                                                                                                                                                to
+                                                                                                                                                                                                                                                                "config.dat"
+                                                                                                                                                                                                                                                                before
+                                                                                                                                                                                                                                                                upload!)</div>
+                                                                                                                                                                                                                                                                <TR>
+                                                                                                                                                                                                                                                                    <TD
+                                                                                                                                                                                                                                                                        HEIGHT="30">
+                                                                                                                                                                                                                                                                        <a
+                                                                                                                                                                                                                                                                            class='button link'
+                                                                                                                                                                                                                                                                            href='download'>Save</a>
+                                                                                                                                                                                                                                                                            <TD>Saves
+                                                                                                                                                                                                                                                                                a
+                                                                                                                                                                                                                                                                                settings
+                                                                                                                                                                                                                                                                                file
+                                                                                                                                                                                                                                                                                <TR>
+                                                                                                                                                                                                                                                                                    <TD
+                                                                                                                                                                                                                                                                                        colspan='2'>
+                                                                                                                                                                                                                                                                                        <h3>Firmware</h3>
+                                                                                                                                                                                                                                                                                        <TR>
+                                                                                                                                                                                                                                                                                            <TD
+                                                                                                                                                                                                                                                                                                HEIGHT="30">
+                                                                                                                                                                                                                                                                                                <a
+                                                                                                                                                                                                                                                                                                    class='button link'
+                                                                                                                                                                                                                                                                                                    href='update'>Load</a>
+                                                                                                                                                                                                                                                                                                    <a
+                                                                                                                                                                                                                                                                                                        class="button help"
+                                                                                                                                                                                                                                                                                                        href="http://www.letscontrolit.com/wiki/index.php/EasyOTA"
+                                                                                                                                                                                                                                                                                                        target="_blank">&#10068;</a>
+                                                                                                                                                                                                                                                                                                        <TD>Load
+                                                                                                                                                                                                                                                                                                            a
+                                                                                                                                                                                                                                                                                                            new
+                                                                                                                                                                                                                                                                                                            firmware
+                                                                                                                                                                                                                                                                                                            <TR>
+                                                                                                                                                                                                                                                                                                                <TD
+                                                                                                                                                                                                                                                                                                                    colspan='2'>
+                                                                                                                                                                                                                                                                                                                    <h3>Filesystem</h3>
+                                                                                                                                                                                                                                                                                                                    <TR>
+                                                                                                                                                                                                                                                                                                                        <TD
+                                                                                                                                                                                                                                                                                                                            HEIGHT="30">
+                                                                                                                                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                                                                                                                                class='button link'
+                                                                                                                                                                                                                                                                                                                                href='filelist'>Flash</a>
+                                                                                                                                                                                                                                                                                                                                <TD>Show
+                                                                                                                                                                                                                                                                                                                                    files
+                                                                                                                                                                                                                                                                                                                                    on
+                                                                                                                                                                                                                                                                                                                                    internal
+                                                                                                                                                                                                                                                                                                                                    flash</table>
+        </form>
+    </section>
+    <footer>
+        <h6>Powered by www.letscontrolit.com</h6>
+    </footer>
+</body>
+
+</html>

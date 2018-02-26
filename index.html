@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8' />
+    <title>ESP_Easy Test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!--<script> function dept_onchange(frmselect) { frmselect.submit(); }</script>//-->
+<!-- <link rel="stylesheet" href="esp.css"> -->
+<link rel="stylesheet" href="esp.css">
+<script src="espjs.js"></script>
+</head>
+
+<body class='bodymenu'>
+    <span class='message' id='rbtmsg'></span>
+    <header class='headermenu'>
+        <h1>ESP Easy Mega: ESP_Easy Test </h1>
+        <div class="menubar" id="myNav">
+            <a class='menu active' href='.'>Main</a>
+            <a class='menu' href='config'>Config</a>
+            <a class='menu' href='controllers'>Controllers</a>
+            <a class='menu' href='hardware'>Hardware</a>
+            <a class='menu' href='devices'>Devices</a>
+            <a class='menu' href='rules'>Rules</a>
+            <a class='menu' href='notifications'>Notifications</a>
+            <a class='menu' href='tools'>Tools</a>
+            <a href="javascript:void(0);" class="icon" onclick="Topnav()">&#9776;</a>
+        </div>
+    </header>
+    <section>
+        <span class='message error'></span>
+        <form>
+            <table>
+                <TR>
+                    <TH>System Info
+                        <TH>Value
+                            <TH>
+                                <TH>System Info
+                                    <TH>Value
+                                        <TH>
+                                            <TR>
+                                                <TD>Unit:
+                                                    <TD>2
+                                                        <TD>
+                                                            <TD>GIT version:
+                                                                <TD>
+                                                                    <TR>
+                                                                        <TD>Local Time:
+                                                                            <TD>2018-02-22 18:19:25
+                                                                                <TD>
+                                                                                    <TD>Uptime:
+                                                                                        <TD>0 days 0 hours 16 minutes
+                                                                                            <TR>
+                                                                                                <TD>Load:
+                                                                                                    <TD>4% (LC=18147)
+                                                                                                        <TD>
+                                                                                                            <TD>Free Mem:
+                                                                                                                <TD>17296 (8280
+                                                                                                                    - sendWebPageChunkedData)
+                                                                                                                    <TR>
+                                                                                                                        <TD>IP:
+                                                                                                                            <TD>192.168.5.152
+                                                                                                                                <TD>
+                                                                                                                                    <TD>Wifi
+                                                                                                                                        RSSI:
+                                                                                                                                        <TD>-85
+                                                                                                                                            dB
+                                                                                                                                            <TR>
+                                                                                                                                                <TH>Node
+                                                                                                                                                    List:
+                                                                                                                                                    <TH>Name
+                                                                                                                                                        <TH>Build
+                                                                                                                                                            <TH>Type
+                                                                                                                                                                <TH>IP
+                                                                                                                                                                    <TH>Age
+                                                                                                                                                                        <TR>
+                                                                                                                                                                            <TD>
+                                                                                                                                                                                <TD>
+                                                                                                                                                                                    <TR>
+                                                                                                                                                                                        <TD>Unit
+                                                                                                                                                                                            1
+                                                                                                                                                                                            <TD>LEDTable
+                                                                                                                                                                                                <TD>20000
+                                                                                                                                                                                                    <TD>ESP
+                                                                                                                                                                                                        Easy
+                                                                                                                                                                                                        Mega
+                                                                                                                                                                                                        <TD>
+                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                class='button link'
+                                                                                                                                                                                                                href='http://192.168.5.151'>192.168.5.151</a>
+                                                                                                                                                                                                                <TD>1
+                                                                                                                                                                                                                    <TR>
+                                                                                                                                                                                                                        <TD>Unit
+                                                                                                                                                                                                                            2
+                                                                                                                                                                                                                            <TD>ESP_Easy
+                                                                                                                                                                                                                                Test
+                                                                                                                                                                                                                                <TD>20100
+                                                                                                                                                                                                                                    <TD>ESP
+                                                                                                                                                                                                                                        Easy
+                                                                                                                                                                                                                                        Mega
+                                                                                                                                                                                                                                        <TD>
+                                                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                                                class='button link'
+                                                                                                                                                                                                                                                href='http://192.168.5.152'>192.168.5.152</a>
+                                                                                                                                                                                                                                                <TD>1
+                                                                                                                                                                                                                                                    <TR>
+                                                                                                                                                                                                                                                        <TD>Unit
+                                                                                                                                                                                                                                                            3
+                                                                                                                                                                                                                                                            <TD>Navodnjavanje
+                                                                                                                                                                                                                                                                <TD>147
+                                                                                                                                                                                                                                                                    <TD>ESP
+                                                                                                                                                                                                                                                                        Easy
+                                                                                                                                                                                                                                                                        <TD>
+                                                                                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                                                                                class='button link'
+                                                                                                                                                                                                                                                                                href='http://192.168.5.153'>192.168.5.153</a>
+                                                                                                                                                                                                                                                                                <TD>7
+                                                                                                                                                                                                                                                                                    <TR>
+                                                                                                                                                                                                                                                                                        <TD>Unit
+                                                                                                                                                                                                                                                                                            6
+                                                                                                                                                                                                                                                                                            <TD>Garaza
+                                                                                                                                                                                                                                                                                                Vrata
+                                                                                                                                                                                                                                                                                                <TD>148
+                                                                                                                                                                                                                                                                                                    <TD>ESP
+                                                                                                                                                                                                                                                                                                        Easy
+                                                                                                                                                                                                                                                                                                        <TD>
+                                                                                                                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                                                                                                                class='button link'
+                                                                                                                                                                                                                                                                                                                href='http://192.168.5.156'>192.168.5.156</a>
+                                                                                                                                                                                                                                                                                                                <TD>0
+                                                                                                                                                                                                                                                                                                                    <TR>
+                                                                                                                                                                                                                                                                                                                        <TD>Unit
+                                                                                                                                                                                                                                                                                                                            7
+                                                                                                                                                                                                                                                                                                                            <TD>SonoffTest
+                                                                                                                                                                                                                                                                                                                                <TD>148
+                                                                                                                                                                                                                                                                                                                                    <TD>ESP
+                                                                                                                                                                                                                                                                                                                                        Easy
+                                                                                                                                                                                                                                                                                                                                        <TD>
+                                                                                                                                                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                                                                                                                                                class='button link'
+                                                                                                                                                                                                                                                                                                                                                href='http://192.168.5.157'>192.168.5.157</a>
+                                                                                                                                                                                                                                                                                                                                                <TD>4</table>
+        </form>
+    </section>
+    <footer>
+        <h6>Powered by www.letscontrolit.com</h6>
+    </footer>
+ 
+
+</body>
+
+</html>
