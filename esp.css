@@ -34,8 +34,9 @@ header h1{
     padding: 10px 0px;
     transition: all 0.3s;
     color: #FFFFFF;
-    text-shadow: 1px 1px 0 #000000, -1px 1px 0 #000000,1px -1px 0 #000000, -1px -1px 0 #000000;
+    text-shadow: 1px 1px 0 #666, -1px 1px 0 #666,1px -1px 0 #666, -1px -1px 0 #666;
     line-height: normal;
+    font-family: Verdana;
 }
 .smaller header{
     position: fixed;
