@@ -1,7 +1,7 @@
 
 function Topnav() {
-    var x = document.getElementById("myNav");
-    if (x.className === "menubar") {
+    var x = document.getElementById('myNav');
+    if (x.className === 'menubar') {
         x.className += " responsive";
     } else {
         x.className = "menubar";
@@ -13,9 +13,9 @@ function resizeHeaderOnScroll() {
         headerEl = document.getElementById('shrink');
 
     if (distanceY > shrinkOn) {
-        headerEl.classList.add("smaller");
+        headerEl.classList.add('smaller');
     } else {
-        headerEl.classList.remove("smaller");
+        headerEl.classList.remove('smaller');
     }
 }
 

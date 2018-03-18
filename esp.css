@@ -177,7 +177,7 @@ table{
     border-collapse: collapse;
     font-size:14px;
 }
-table.main-table{
+table.home-table, table.no-wrapp{
     white-space: nowrap;
 }
 table td{
@@ -195,6 +195,7 @@ table th{
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     text-transform: uppercase;
     font-weight: normal;
+    position: relative;
 }
 .button {
     background-color: var(--esp-green);
@@ -235,13 +236,38 @@ table th{
   background: var(--esp-blue);
   border: 1px solid var(--border-color);
 }
+button.close{
+  color: #fff;
+  background-color: #C40233;
+}
+input[value=Submit] {
+  background: var(--esp-blue);
+  color: #fff;
+}
+input[value=Delete]{
+  color: #fff;
+  background-color: #C40233;
+}
+ .button.close {
+  color: #C40233;
+  background: none;
+  border: 2px solid #C40233;
+}
+input[value=Delete]:hover, .button.close:hover{
+  color: #fff;
+  background-color: #C40233;
+}
+td.btn-group .button{
+  width: 100%;
+  margin-bottom: 13px;
+}
 
 textarea {
     width: 100%;
     height: 150px;
     padding: 7px 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #999;
     border-radius: 4px;
     /* background-color: #999; */
     resize: none;
@@ -260,14 +286,14 @@ textarea {
   input[type="search"],
   input[type="tel"],
   input[type="color"],
-  select,
-  textarea{
+  select{
     width: 100%;
     padding: 7px 10px;
     margin:0px;
     height: 36px;
     border: 1px solid #999;
     min-width: 150px;
+    border-radius: 2px;
 }
   input[type="text"]:focus,
   input[type="password"]:focus,
