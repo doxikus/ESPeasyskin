@@ -49,11 +49,11 @@ header h1{
     line-height: normal;
     font-family: Verdana;
 }
-header.smaller{
+.smaller header{
     position: fixed;
     transition: all 0.3s;
 }
-header.smaller h1, header.smaller .logo{
+.smaller header h1, .smaller header .logo{
     display: none;
 }
 header .logo{
@@ -153,6 +153,14 @@ header .menubar a:before {
         -webkit-transform: scaleY(1);
         transform: scaleY(1);
       }
+      td.btn-group{
+        text-align: center;
+      }
+      table td.btn-group .button{
+        display: inline-block;
+        float: none;
+        width: auto !important;
+      }
       a.button{
         float: left;
       }
@@ -172,7 +180,7 @@ section{
 }
   }
 section{
-    padding: 0px 1% 60px 1%;
+    padding: 1% 1% 60px 1%;
     width: 100%;
     overflow-x: auto;
 }
@@ -266,6 +274,7 @@ input[value=Delete]{
   color: #C40233;
   background: none;
   border: 2px solid #C40233;
+  padding: 8px 15px;
 }
 input[value=Delete]:hover, .button.close:hover{
   color: #fff;
