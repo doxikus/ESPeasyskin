@@ -1,22 +1,24 @@
 
 function Topnav() {
-    var x = document.getElementById('myNav');
-    if (x.className === 'menubar') {
-        x.className += " responsive";
-    } else {
-        x.className = "menubar";
-    }
+    var x = document.getElementsByClassName("menubar");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].classList.toggle("responsive");
 }
-function resizeHeaderOnScroll() {
-    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-        shrinkOn = 100,
-        headerEl = document.getElementById('shrink');
-
-    if (distanceY > shrinkOn) {
-        headerEl.classList.add('smaller');
-    } else {
-        headerEl.classList.remove('smaller');
-    }
 }
-
-window.addEventListener('scroll', resizeHeaderOnScroll);
+window.onscroll = function() {onscrollupdate()};
+function onscrollupdate() {
+   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+               var x = document.getElementsByClassName('headermenu');
+               var i;
+               for (i = 0; i < x.length; i++) {
+                 x[i].classList.add("smaller");
+           }
+   } else {
+               var x = document.getElementsByClassName('headermenu');
+               var i;
+               for (i = 0; i < x.length; i++) {
+                 x[i].classList.remove("smaller");
+           }
+   }
+}

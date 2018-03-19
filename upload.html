@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Test 2</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <script>
+    <!--
+    function dept_onchange(frmselect) {
+      frmselect.submit();
+    }
+    //-->
+  </script>
+  <script src="espjs.js"></script>
+  <link rel="stylesheet" type="text/css" href="esp.css">
+</head>
+
+<body class='bodymenu' id='shrink'><span class='message' id='rbtmsg'></span>
+  <header class='headermenu'>
+    <div class='logo'></div>
+    <h1>ESP Easy Mega: Test 2</h1>
+    <div class='menubar' id='myNav'><a class='menu' href='.'>Main</a><a class='menu' href='config'>Config</a><a class='menu' href='controllers'>Controllers</a><a class='menu' href='hardware'>Hardware</a><a class='menu' href='devices'>Devices</a><a class='menu' href='rules'>Rules</a>
+      <a
+        class='menu' href='notifications'>Notifications</a><a class='menu active' href='tools'>Tools</a><a href='javascript:void(0);' class='icon' onclick='Topnav()'>&#9776;</a></div>
+  </header>
+  <section><span class='message error'></span>
+    <form enctype="multipart/form-data" method="post">
+      <p>Upload settings file:<br><input type="file" name="datafile" size="40"></p>
+      <div><input class='button link' type='submit' value='Upload'></div><input type='hidden' name='edit' value='1'></form>
+  </section>
+  <footer>
+    <h6>Powered by www.letscontrolit.com</h6></footer>
+</body>
+
+</html>
