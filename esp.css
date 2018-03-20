@@ -37,6 +37,12 @@ h1,h2,h3,h4,h5,h6{
 footer h6{
   margin: 0px
 }
+a{
+  color: var(--esp-blue);
+}
+a:hover{
+  text-decoration: none;
+}
 
 header h1{
     margin:0px;
@@ -153,14 +159,6 @@ header .menubar a:before {
         -webkit-transform: scaleY(1);
         transform: scaleY(1);
       }
-      td.btn-group{
-        text-align: center;
-      }
-      table td.btn-group .button{
-        display: inline-block;
-        float: none;
-        width: auto !important;
-      }
       a.button{
         float: left;
       }
@@ -178,6 +176,17 @@ body footer{
 section{
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
+  }
+
+  @media screen and (min-width: 640px) {
+    td.btn-group{
+      text-align: center;
+    }
+    table td.btn-group .button{
+      display: inline-block;
+      float: none;
+      width: auto !important;
+    }
   }
 section{
     padding: 1% 1% 60px 1%;
@@ -234,7 +243,7 @@ table th{
     float: none;
     line-height: normal;
     margin-right: 5px;
-    line-height: 16px;
+    line-height: 15px;
     border-radius: 3px;
 }
 .button.outline{
@@ -258,10 +267,6 @@ table th{
   background: var(--esp-blue);
   border: 1px solid var(--border-color);
 }
-button.close{
-  color: #fff;
-  background-color: #C40233;
-}
 input[value=Submit] {
   background: var(--esp-blue);
   color: #fff;
@@ -274,7 +279,7 @@ input[value=Delete]{
   color: #C40233;
   background: none;
   border: 2px solid #C40233;
-  padding: 8px 15px;
+  padding: 8px 13px;
 }
 input[value=Delete]:hover, .button.close:hover{
   color: #fff;
@@ -314,9 +319,9 @@ textarea {
     padding: 7px 10px;
     margin:0px;
     height: 36px;
-    border: 1px solid #999;
+    border: 2px solid var(--esp-blue);
     min-width: 150px;
-    border-radius: 2px;
+    border-radius: 3px;
 }
   input[type="text"]:focus,
   input[type="password"]:focus,
